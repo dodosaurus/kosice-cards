@@ -1,22 +1,12 @@
 import { ScrollView, StyleSheet } from 'react-native';
 
 import { Card } from '@/components/card';
-import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { cards } from '@/constants/cards';
 
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedView style={styles.header}>
-        <ThemedText type="title" style={styles.title}>
-          Košice Cards
-        </ThemedText>
-        <ThemedText style={styles.subtitle}>
-          Objavuj pamiatky a zbieraj karty
-        </ThemedText>
-      </ThemedView>
-      
       <ScrollView 
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
@@ -54,5 +44,6 @@ const styles = StyleSheet.create({
   scrollContent: {
     padding: 20,
     paddingTop: 0,
+    marginTop: 10,
   },
 });
