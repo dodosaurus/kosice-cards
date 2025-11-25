@@ -1,19 +1,19 @@
-import { StyleSheet, View, Dimensions } from 'react-native';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { StyleSheet, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import Animated, { 
-  useAnimatedStyle, 
-  useSharedValue, 
-  withSpring, 
-  withTiming,
+import Animated, {
+  Extrapolation,
   interpolate,
-  Extrapolation 
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+  withTiming
 } from 'react-native-reanimated';
 
+import { Card as CardType, QUALITY_TIER_LABELS, RARITY_COLORS, RARITY_LABELS } from '@/constants/cards';
 import { ThemedText } from './themed-text';
 import { ThemedView } from './themed-view';
-import { Card as CardType, RARITY_COLORS, RARITY_LABELS, QUALITY_TIER_LABELS } from '@/constants/cards';
 
 interface CardProps {
   card: CardType;
